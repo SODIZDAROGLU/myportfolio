@@ -15,6 +15,9 @@ p {
 }
 
 :root {
+  --page-padding: 1.2rem 10rem;
+
+   /* COLORS */
   --light-shades: #f3f3f4;
   --main-brand: #1693ac;
   --dark-accent: #333;
