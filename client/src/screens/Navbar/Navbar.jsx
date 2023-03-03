@@ -1,14 +1,40 @@
-import React from 'react';
+import {useState, useEffect} from 'react';
 import "./Navbar.css";
-import hamburger from './hamburger-menu.svg';
+import hamburgerBtn from './hamburger-menu.svg';
 
 function Navbar() {
+    const [showLinks,setShowLinks] = useState(true);
+    const [showBtn,setShowBtn] = useState(false);
+
+    const handleClick = () => setShowLinks(!showLinks);
+    window.addEventListener("resize",(e) => {
+        if(e.target.innerWidth > 768 ) {
+            setShowBtn(false);
+            setShowLinks(true);
+        } else {
+            setShowBtn(true);
+            setShowLinks(false);
+        }
+    });
+
+    useEffect(() => {
+      if(window.innerWidth > 768) {
+        setShowBtn (false);
+        setShowLinks(true);
+      } else {
+        setShowBtn (true);
+        setShowLinks(false);
+      }
+    
+    }, [])
+    
   return (
     <div className='navbar-container'>
         <div className='navbar-name'>
            <div>Sukru Oguz Dizdaroglu</div> 
-           <img src={hamburger} alt="hamburgerNenu"  />
+           {showBtn && (<img src={hamburgerBtn} onClick = {handleClick} alt="hamburgerNenu"  />)}
             </div>
+           {showLinks && (
         <div className='navbar-links-container'>
             <a href='#home'>Home</a>
             <a href='#aboutme'>About Me</a>
@@ -16,8 +42,9 @@ function Navbar() {
             <a href='#portfolio'>Portfolio</a>
             <a href='#contact'>Contact</a>
         </div>
+        )}
     </div>
-  )
+  );
 }
 
 export default Navbar
