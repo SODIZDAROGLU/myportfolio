@@ -20,7 +20,7 @@ import { ReactComponent as Html5} from './svg/html5-svgrepo-com.svg';
 import { ReactComponent as Idea} from './svg/idea-coding-svgrepo-com.svg'
 import { ReactComponent as Javascript} from './svg/javascript-svgrepo-com.svg';
 import { ReactComponent as Language} from './svg/language-csharp-svgrepo-com.svg';
-import { ReactComponent as React1} from './svg/react-logo-programming-svgrepo-com.svg'
+import { ReactComponent as React1} from './svg/react-logo-programming-svgrepo-com.svg';
 import { ReactComponent as Smartphone} from './svg/smartphone-coding-svgrepo-com.svg';
 import { ReactComponent as Stack} from './svg/stack-svgrepo-com.svg';
 
@@ -37,6 +37,32 @@ function AnimatedBackground({children}) {
     const layers = arr.map(i =>{
         return(
             <div key = {i} className = "animated-row">
+                <div>
+                    <Atom/>
+                    <Bootstrap/>
+                    <Browser/>
+                    <Bug/>
+                    <Cloud/>
+                    <Code02/>
+                    <CodeNewbie/>
+                    <CodingFile/>
+                    <CodingMonitor/>
+                    <CodingProgramming/>
+                    <Coding1/>
+                    <Coding2/>
+                    <Coding3/>
+                    <CodingWeb/>
+                    <Css/>
+                    <Dotnet/>
+                    <Html/>
+                    <Html5/>
+                    <Idea/>
+                    <Javascript/>
+                    <Language/>
+                    <React1/>
+                    <Smartphone/>
+                    <Stack/>
+                </div>
                 <div>
                     <Atom/>
                     <Bootstrap/>
